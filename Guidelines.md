@@ -198,6 +198,17 @@ float average=getAverage();
 7. Encapsulate the concepts that vary
 
 8. Give classes a complete interface
+```
+Implementation 1(correct):
+pop()
+push()
+isEmpty()
+size()
+top()
+Implementation 2:
+pop()
+push()
+```
 
 9. A wellformed class has a consistent interface
 
