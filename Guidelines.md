@@ -44,6 +44,36 @@ public class AutoDealer{
   }
 }
 ```
+```
+Example 1(correct):
+public class Student {
+private String name;
+private String idNum;
+private int age;
+public int getAge() { return age; }
+public String getName() { return name; }
+public String getIdNum() { return idNum; }
+public void setAge( int newAge) { age = newAge; }
+public void setName(String newName) { name = newName; }
+public void setIdNum( String newId) { idNum = newId; }
+}
+public static void main(String [] args){
+Student S1 = new Student();
+S1.setAge(21);
+System.out.println("Age of the student is " + S1.getAge());
+}
+Example 2:
+public class Student {
+public String name;
+public String idNum;
+public int age;
+}
+Public Static void main(String [] args){
+Student S1 = new Student();
+S1.age =21;
+System.out.println("Age of the student is " + S1.age);
+}
+```
 3. Expert pattern: The object that contains the necessary data to perform a task should be the object that manipulates the data
  ```
  Example 1:
@@ -127,6 +157,40 @@ a2.printDetails();
 }
 }
 ```
+
+```
+Example 1:
+void analyzeMidtermPerformance() {
+float sum=0;
+for (int score : scores)
+sum = sum + score;
+float average = sum / size;
+// ... more code to do the analysis
+}
+void analyzeProjectPerformance() {
+float sum=0;
+for (int score : scores)
+sum = sum + score;
+float average = sum / size;
+// ... more code to do the analysis
+}
+Example 2(correct):
+float getAverage() {
+float sum=0;
+for (int score : scores)
+sum = sum + score;
+float average = sum / size;
+return average;
+}
+void analyzeMidtermPerformance() {
+float average= getAverage();
+// ... more code to do the analysis
+}
+void analyzeProjectPerformance() {
+float average=getAverage();
+// ... more code to do the analysis
+}
+```
 5. Design your classes so that they can handle change
 
 6. Code to interfaces, not classes
@@ -136,3 +200,16 @@ a2.printDetails();
 8. Give classes a complete interface
 
 9. A wellformed class has a consistent interface
+
+```
+Example 1:
+find_employee_by_name(..)
+get_employee_by_id(..)
+retrieve_employee_by_department(..)
+fetch_employee_by_address(..)
+Example 2(correct):
+find_employee_by_name(..)
+find_employee_by_id(..)
+find_employee_by_department(..)
+find_employee_by_address(..)
+```
