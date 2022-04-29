@@ -80,6 +80,7 @@ What pattern can we use to simplify this construction?  (Note that all the objec
 
 ### Bridge
  - **A pattern that helps detach interface from implementation.**
+ - **The Bridge pattern decouples a set of implementations from set of objects using them.**
  - Different operating systems use different frameworks to implement their graphical user interface. But, many applications run on the various operating systems. Windows and other widgets need to be displayed in essentially the same way on each operating system, regardless of what application is displaying them.
  - I would like any application on my system to be able to read or write data to local files, to network drives, or to cloud storage. What pattern can I use so that I don t have to rewrite the code that reads and writes data separately for each application?
 
@@ -116,6 +117,9 @@ What pattern can we use to simplify this construction?  (Note that all the objec
 
 
 ### Proxy
+ - **Proxies can be used to invoke remotely located services.**
+ - **Both Decorator and Proxy patterns use composition and delegate the execution to the subject. Decorator can modify the behavior of some subject methods as well.**
+ - **The Proxy pattern provides control of an object by providing a placeholder for it.**
  - You want to take some run-time measurements on your system. Each time a method is called, you want to record the parameters and the return address, and the clock time. Before your method returns, you want to again record the clock time, so you can determine how long it took the method to execute. Rather than doing this by instrumenting the run-time system, you want to transform the source program so that instead of calling method x directly, the caller calls a "wrapper" for x that logs all of this information (parameters, return address, time). Then the "wrapper" calls the original method x. After the original method returns, the wrapper calculates the time spent in the method, and then returns back to the caller of the original method.
  - The Java Remote Method Invocation (RMI) system allows an object running in one Java virtual machine to invoke methods on an object running in another Java virtual machine.
  - An Internet filter for a school accepts requests to visit Web pages. Unless it is determined that the pages contain inappropriate content, the requested URL is sent on to the school’s ISP.
@@ -167,6 +171,9 @@ proprietors acceptable-use policy, in which case it will display a message say
 
 ### Observer
  - **MVC is made up of instances of this pattern.**
+ - **The Observer is responsible for registration and not the subject.**
+ - **There is high coupling between observer base class and subject.**
+ - **Defines onetomany dependency between objects.**
  - Consider the case of a medical-alert system that provides alerts to different types of patients. The system sends alerts via email to patients, but what if in the future this system has a requirement to send alerts to mobile devices (SMS). What type of pattern would help ease the addition of new devices with the least impact or change to the server?
  - There are random events in the game, e.g., a loot box containing medical supplies and weapons is spawned at a random location on the map. All the players currently playing the game need to be notified of any such event. 
  - Consumers who register their cars or other products online are notified in the event of a recall, or a release of a new version of the software, etc.
