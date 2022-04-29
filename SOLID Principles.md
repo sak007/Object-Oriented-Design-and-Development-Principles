@@ -15,6 +15,9 @@
  
  ## Liskov Substitution principle
   - Subtypes must be substitutable for their base types.
+  - Matt was supposed to design a class to count the number of products in a shopping cart and calculate the cost of these products. He chooses
+to create the Cart class by extending the ArrayList class, and overrides the size method to count the number of different products. Which
+principle/concept can best explain why this is a bad idea?
  
  ## Interface Segregation principle
   - Clients should not be forced to depend on methods that they do not use.
